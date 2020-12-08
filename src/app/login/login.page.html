@@ -1,0 +1,23 @@
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <div class="info">INFO BRASIL</div>
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-title class="title">Acessar o App</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-input name="email" type="email" placeholder="seu@email.com" ngModel required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="password" type="password" placeholder="Senha" ngModel required></ion-input>
+        </ion-item>
+        <div padding>
+          <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">Entrar</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </form>
+  
+</ion-content>
